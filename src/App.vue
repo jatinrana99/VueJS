@@ -6,18 +6,21 @@
   
   <h3>Passing data in a Child Components</h3>
   <Child name = "jatin Rana"  :user="user" :info="info"/>
-
-
-
-
+  
+  
+  
+  
   <!-- this is for users functions -->
   
-    <li v-for="user in users" :key="user.id">
-      {{ user.pos }}
-      <User :data="user" :getName="getName"/>
-<!-- {{ user.email }} -->
-    </li>
+  <li v-for="user in users" :key="user.id">
+    {{ user.pos }}
+    <User :data="user" :getName="getName"/>
+    <!-- {{ user.email }} -->
+  </li>
   
+  <Student name="Raju" :subject="subject"/>
+  <Teacher name = "Baju" :subject="subject"/>
+
 </template>
 
 <script>
@@ -26,6 +29,8 @@ import Test from './components/Test.vue'
 import Event from './components/Event.vue'
 import Child from './components/Child.vue'
 import User from './components/User.vue'
+import Student from './components/Student.vue'
+import Teacher from './components/Teacher.vue'
 
 export default {
   name: 'App',
@@ -34,7 +39,9 @@ export default {
     Test,
     Event,
     Child,
-    User
+    User,
+    Student,
+    Teacher
   },
   data(){
     return {
@@ -47,8 +54,15 @@ export default {
         {id:'02' , name:'kaju' , email :'kaju@gmail.com' , pos:'Java Developer'},
         {id:'03' , name:'maju' , email :'maju@gmail.com',pos:'React Developer'},
         {id:'04' , name:'baju' , email :'baju@gmail.com',pos:'.Net Developer'},
-    ]
+    ]  ,
+    
+    // want to pass same data in taecher as well as student class
+      subject:"Hindi"
+    
     }
+
+
+
   },
   methods:{
     info(){
@@ -57,7 +71,6 @@ export default {
     },
     getName(name){
       alert(name)
-      // ended here I am here
     }
   }
 }
