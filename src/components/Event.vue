@@ -79,6 +79,36 @@
 
     <h4> Technology known by you {{ technology }}</h4>
     <h4>Profession {{ who }}</h4>
+
+
+    <!-- <div class="one">If else condition</div> -->
+    <h1 v-if="show">Hello User</h1>
+    <h1 v-else >Bye , Have a nice day !</h1>
+    <button v-on:click="show=!show">Click</button>
+    <!-- <button v-on:click="hide=true">Hide or Un-Hide</button>
+    <br> -->
+   <h5 class="one">List of Best Laptop are </h5>
+   <ul>
+    <li v-for="item in laptop " :key="item">
+{{ item }}
+        
+    </li>
+   </ul>
+   <br>
+   <br>
+   <ul>
+    <li v-for= "info in person" :key="info">
+        Name is : {{ info.name }}
+        <br>
+
+        Email is : {{ info.email }}
+<br>
+<br>
+<br>
+    </li>
+
+   </ul>
+   
 </template>
 
 <script>
@@ -91,7 +121,18 @@ export default {
             email:null,
             password:null,
             technology:[],
-            who:null
+            who:null,
+            show:true,
+            hide:false,
+            laptop:['Dell','Acer','Lenovo','Asus','Hp'],
+            person:[
+                {name:"Jatin Rana",
+                 email:'jatin@gmail.com'},
+                 {name:"Raj Sharma",
+                 email:'raj@gmail.com'},
+                 {name:"Richa Singh",
+                 email:'richa@gmail.com'}
+            ]
         }
     },
     methods: {
