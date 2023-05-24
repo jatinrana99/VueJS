@@ -5,9 +5,9 @@
         <br/>
 
         <input type="text" v-model="name" />
-        <button >Clear</button>
-        <button>Captial</button>
-<!-- right now above buttons are not working  -->
+        <button v-on:click="clearData()">Clear</button>
+        <button v-on:click="capitalData()">Captial</button>
+<!-- right now above buttons are working  -->
 
         <h4>Email {{Email}}</h4>
         <h4>Mobile Number {{getMobile()}}</h4>
@@ -46,8 +46,6 @@ export default {
         return{
             name:  "",
             Email : `jatin@123`,
-
-
             // passing a  function
 
             getMobile: function () {
@@ -86,6 +84,13 @@ methods: {
 // here i am using data(function value) in this method
          Email : this.Email
         }
+    },
+
+    clearData(){
+        return this.name='';
+    },
+    capitalData(){
+        return this.name = this.name.toUpperCase();
     }
 },
 
