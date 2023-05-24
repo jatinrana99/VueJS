@@ -3,12 +3,16 @@
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   <Test/>
   <Event/>
+  
+  <h3>Passing data in a Child Components</h3>
+  <Child name = "jatin Rana"  :user="user" :info="info"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
-import Event from './components/Event.vue';
+import Event from './components/Event.vue'
+import Child from './components/Child.vue'
 
 export default {
   name: 'App',
@@ -16,6 +20,20 @@ export default {
     HelloWorld,
     Test,
     Event,
+    Child
+  },
+  data(){
+    return {
+      user: {
+        name:'Developer' , email:'dev@hotmail.com'
+      }
+    }
+  },
+  methods:{
+    info(){
+      console.warn("Parent function call")
+      alert("How are you ?")
+    }
   }
 }
 
