@@ -16,17 +16,20 @@
 
   <router-view></router-view>
 
+
+<CallAPI></CallAPI>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Test from './components/Test.vue'
-
+import CallAPI from './components/CallAPI.vue'
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    Test
+    Test,
+    CallAPI
   }
 }
 

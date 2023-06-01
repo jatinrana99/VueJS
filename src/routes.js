@@ -7,17 +7,17 @@ import PageNotFound from './components/PageNotFound.vue';
 const routes =[
 {
     name:`Home`,
-    path:`/`,
+    path:'/',
     component:Home
 },
 {
     name:`Login`,
-    path:`/login`,
+    path:'/login',
     component:Login
 },
 {
     name:`Profile`,
-    path:`/profile/:name`,
+    path:'/profile/:name',
     component:Profile
 },
  {
