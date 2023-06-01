@@ -21,6 +21,10 @@
   <Student name="Raju" :subject="subject"/>
   <Teacher name = "Baju" :subject="subject"/>
 
+
+  <!-- routers -->
+  <router-view></router-view>
+
 </template>
 
 <script>
