@@ -7,6 +7,12 @@
   <router-link to="/login">Login</router-link>
   <br>
   <router-link to="/profile">Profile</router-link>
+  <br>
+  <router-link to="/profile/Umar">Hi Umar Welcome</router-link>
+  <br>
+  <router-link to="/profile/Ram">Hi Ram Weclome</router-link>
+
+  <button v-on:click="$router.push('/login')">Login Page</button>
 
   <router-view></router-view>
 

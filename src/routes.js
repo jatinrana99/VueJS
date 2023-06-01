@@ -14,10 +14,9 @@ const routes =[
     path:`/login`,
     component:Login
 },
-
 {
     name:`Profile`,
-    path:`/profile`,
+    path:`/profile/:name`,
     component:Profile
 }
 ];
@@ -27,4 +26,4 @@ const router = createRouter({
     routes
 });
 
-export default router
+export default router;
